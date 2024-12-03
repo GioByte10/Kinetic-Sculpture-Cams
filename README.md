@@ -177,6 +177,10 @@ Such that
 
 $$a\sin\left(x\right)+b\cos\left(x\right)=A\sin\left(x+\phi\right)$$
 
-We end up with
+We end up with the sine function
 
 $$y_{T}=y(\frac{\pi}{2}-\theta, \theta)=R+A\sin\left(x+\phi\right)$$
+
+<div align="center">
+  <img src="assets/desmos.gif" alt="description of gif" width="900"/>
+</div>
