@@ -8,9 +8,13 @@
 
 <img src="assets/cams_front_.png" align = "right" alt="front of cams" width="250"/>
 
-This kinetic sculpture is designed to simulate an ocean wave with small height relative to its wavelength, which approximates a sine function. In order to achieve this behaviour, I have created $$n$$ _concentric_ cams which are identical to each other, but have a phase shift relative to each other, such that each subsequent cam is offsetted by $$Φ$$ degrees. Each cam has its own rectangular follower that falls and rises as the cam moves.
+This kinetic sculpture is designed to simulate an ocean wave with small height relative to its wavelength, which approximates a sine function. In order to achieve this behaviour, I have created $$n$$ _eccentric_ cams which are identical to each other, but have a phase shift relative to each other, such that each subsequent cam is offsetted by $$Φ$$ degrees. Each cam has its own rectangular follower that falls and rises as the cam moves.
 
 Making the (theoretical but not real) assumption that the tangent point of contact between the cam and the rectangular follower is at some point $$y_{T}$$ along $$x=0$$, $$(0, y_{T})$$, I aim to prove that this configuration produces a pure sine function.<br><br>
+
+## References
+[Desmos graph](https://www.desmos.com/calculator/odotgpws6i)
+<br><br>
 
 ## Setup
 <img align="left" src="assets/setup.png" alt="setup.png" width="250"/>
@@ -24,7 +28,7 @@ $$\vec{r}\(t)=
 \end{bmatrix}
 $$
 
-$$t \in [0, 6\pi]$$
+$$t \in [0, 2\pi]$$
 
 <br><br>
 
@@ -72,7 +76,7 @@ $$\vec{r}\(t, \theta)=
 $$
 
 ## Derivation
-We know that, at its highest point, the tangent to the curvature will have a vector $$\vec{v}(t, \theta)$$, with a negative x-component and a zero y-component
+We know that, at its highest point, the tangent to the circle will have a vector $$\vec{v}(t, \theta)$$, with a negative x-component and a zero y-component
 
 <div align="center">
   <img src="assets/tangent.png" alt="description of gif" width="300"/>
@@ -109,8 +113,6 @@ $$R\cos\left(t\right)\cos\left(\theta\right)=R\sin\left(t\right)\sin\left(\theta
 
 $$\cos\left(t\right)\cos\left(\theta\right)=\sin\left(t\right)\sin\left(\theta\right)$$
 
-$$\cos\left(t\right)\cos\left(\theta\right)=\sin\left(t\right)\sin\left(\theta\right)$$
-
 $$\frac{\cos\left(t\right)}{\sin\left(t\right)}\cos\left(\theta\right)=\sin\left(\theta\right)$$
 
 $$\frac{\cos\left(t\right)}{\sin\left(t\right)}=\frac{\sin\left(\theta\right)}{\cos\left(\theta\right)}$$
@@ -123,7 +125,7 @@ $$t=\tan^{-1}\left(\cot\left(\theta\right)\right)$$
 
 Note that
 
-$$\cot\left(x\right)=\tan\left(\frac{\pi}{2}-\theta\right)$$
+$$\cot\left(x\right)=\tan\left(\frac{\pi}{2}-x\right)$$
 
 Thus
 
@@ -131,7 +133,7 @@ $$t=\tan^{-1}\left(\tan\left(\frac{\pi}{2}-\theta\right)\right)$$
 
 $$t=\frac{\pi}{2}-\theta$$
 
-This means that the highest point on a concentric cam rotated by $$\theta$$ about the origin is when $$t=\frac{\pi}{2}-\theta$$, at
+This means that the highest point on an eccentric cam rotated by $$\theta$$ about the origin is when $$t=\frac{\pi}{2}-\theta$$, at
 
 $$y_{T}=y(t, \theta)=y(\frac{\pi}{2}-\theta, \theta)$$
 
@@ -182,5 +184,6 @@ We end up with the sine function
 $$y_{T}=y(\frac{\pi}{2}-\theta, \theta)=R+A\sin\left(x+\phi\right)$$
 
 <div align="center">
-  <img src="assets/desmos.gif" alt="description of gif" width="900"/>
+  <img src="assets/demos.gif" alt="description of gif" width="700"/>
 </div>
+
